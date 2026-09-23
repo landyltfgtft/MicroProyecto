@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Red - Taylor Swift</title>
+</head>
+<body bgcolor="lightcoral">
+  <header>
+    <h1><font color="darkred">Red (2012)</font></h1>
+    <p><font color="white">
+      El cuarto álbum de estudio de Taylor Swift, una mezcla de country, pop y rock.  
+      *Red* es recordado por su intensidad emocional y por éxitos como <i>We Are Never Ever Getting Back Together</i> y <i>I Knew You Were Trouble</i>.
+    </font></p>
+  </header>
+
+  <main>
+    <h2><font color="black">Enlaces destacados</font></h2>
+    <p>
+      <a href="https://www.taylorswift.com" target="_blank">Sitio oficial</a><br><br>
+      <a href="https://www.youtube.com/@TaylorSwift" target="_blank">Canal de YouTube</a><br><br>
+      <a href="https://x.com/tsbzkdl" target="_blank">Twitter</a><br><br>
+      <a href="index.html">Volver al inicio</a>
+    </p>
+
+    <h2><font color="black">Video destacado</font></h2>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/WA4iX5D9Z64"
+      title="Taylor Swift - I Knew You Were Trouble (Official Video)" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <h2><font color="black">Tabla de canciones</font></h2>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Número</th>
+        <th>Canción</th>
+        <th>Duración</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>State of Grace</td>
+        <td>4:55</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Red</td>
+        <td>3:43</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Treacherous</td>
+        <td>4:00</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>I Knew You Were Trouble</td>
+        <td>3:39</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>We Are Never Ever Getting Back Together</td>
+        <td>3:13</td>
+      </tr>
+    </table>
+
+  
+    <h2><font color="black">Listas variadas</font></h2>
+    <h3>Lista ordenada de premios</h3>
+    <ol>
+      <li>Billboard Top 200 #1</li>
+      <li>American Music Award al Álbum Favorito</li>
+      <li>MTV Europe Music Award</li>
+    </ol>
+
+    <h3>Lista no ordenada de temas del álbum</h3>
+    <ul>
+      <li>Amor</li>
+      <li>Desamor</li>
+      <li>Pasión</li>
+      <li>Confusión</li>
+    </ul>
+
+    <h3>Lista de definición</h3>
+    <dl>
+      <dt><dfn>Red</dfn></dt>
+      <dd>El color de las emociones intensas que definen el álbum.</dd>
+    </dl>
+
+  
+    <h2><font color="black">Canvas interactivo</font></h2>
+    <p>Haz clic en el lienzo para dibujar corazones ❤️</p>
+    <canvas id="redCanvas" width="400" height="300" style="border:1px solid black;"></canvas>
+
+    <script>
+      const canvas = document.getElementById("redCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.addEventListener("click", (e) => {
+        const x = e.offsetX;
+        const y = e.offsetY;
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        ctx.fill();
+      });
+    </script>
+
+  
+    <h2><font color="black">Formulario interactivo</font></h2>
+    <form>
+      <fieldset>
+        <legend>Tu experiencia con Red</legend>
+
+        <label for="nombre">Tu nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="favorita">Canción favorita:</label><br>
+        <input list="canciones" id="favorita" name="favorita">
+        <datalist id="canciones">
+          <option value="Red">
+          <option value="Trouble">
+          <option value="We Are Never Ever Getting Back Together">
+          <option value="State of Grace">
+        </datalist><br><br>
+
+        <label for="numero">Número de veces que lo escuchaste:</label><br>
+        <input type="number" id="numero" name="numero" min="1" max="100"><br><br>
+
+        <label for="color">Color que te recuerda al álbum:</label><br>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="40"></textarea><br><br>
+      </fieldset>
+    </form>
+
+    
+    <h2><font color="black">Opciones extra</font></h2>
+    <p><kbd>Ctrl + R</kbd> para reiniciar el canvas.</p>
+    <p><samp>Error 2012: emociones intensas detectadas</samp></p>
+    <p>Variable <var>x</var> = año de lanzamiento.</p>
+    <p><cite>Red</cite> — canción que da nombre al álbum.</p>
+    <p><q>“Loving him was red.”</q></p>
+  </main>
+
+  <footer>
+    <p><font color="gray">© 2026 Zoe - Proyecto HTML</font></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fearless - Taylor Swift</title>
+</head>
+<body bgcolor="lightgoldenrodyellow">
+  <header>
+    <h1><font color="darkgoldenrod">Fearless (2008)</font></h1>
+    <a href="index.html">Volver al inicio</a>
+    <p><font color="brown">
+      El segundo álbum de estudio de Taylor Swift, una obra que mezcla juventud, amor y valentía.  
+      Con *Fearless*, Taylor se convirtió en un fenómeno global y ganó el Grammy al Álbum del Año.
+    </font></p>
+  </header>
+
+  <main>
+    <h2><font color="darkred">Portada del álbum</font></h2>
+    <img src="img/frearless.jpg" alt="Portada del álbum Fearless" width="300">
+
+    <h2><font color="darkred">Historia</font></h2>
+    <p>
+      <font color="darkgreen">
+      *Fearless* fue lanzado el 11 de noviembre de 2008.  
+      Taylor escribió la mayoría de las canciones inspirada en sus experiencias adolescentes y su visión del amor.  
+      El álbum incluye clásicos como <i>Love Story</i>, <i>You Belong With Me</i> y <i>Fifteen</i>.  
+      En 2021, lanzó una versión regrabada titulada *Fearless (Taylor’s Version)* como parte de su proyecto para recuperar sus derechos musicales.
+      </font>
+    </p>
+
+    <h2><font color="darkred">Video destacado</font></h2>
+    <video width="640" height="360" controls loop poster="img/tim.jpg">
+  <source src="archivos/taylor2.mp4" type="video/mp4">
+  <track src="archivos/subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+</video>
+
+    <h2><font color="darkred">Curiosidades</font></h2>
+    <ul>
+      <li><font color="darkgreen">Fue el álbum que consolidó a Taylor como estrella mundial.</font></li>
+      <li><font color="darkgreen">“Love Story” es una de las canciones más vendidas de la historia.</font></li>
+      <li><font color="darkgreen">La gira de Fearless fue la primera gran gira internacional de Taylor.</font></li>
+      <li><font color="darkgreen">La versión regrabada en 2021 incluyó canciones inéditas “From The Vault”.</font></li>
+    </ul>
+
+    <h2><font color="darkred">Tabla de impacto</font></h2>
+    <table border="1" cellpadding="5">
+      <tr bgcolor="lightgoldenrodyellow">
+        <th>Año</th>
+        <th>Evento</th>
+        <th>Impacto</th>
+      </tr>
+      <tr>
+        <td>2008</td>
+        <td>Lanzamiento del álbum</td>
+        <td>Debut #1 en Billboard</td>
+      </tr>
+      <tr>
+        <td>2010</td>
+        <td>Grammy a Álbum del Año</td>
+        <td>Primera mujer más joven en ganarlo</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>Fearless (Taylor’s Version)</td>
+        <td>Regrabación celebrada por los fans</td>
+      </tr>
+    </table>
+
+    <h2><font color="darkred">Juego en Canvas: Coronas doradas 👑</font></h2>
+    <p><font color="darkblue">Haz clic en el lienzo para crear coronas doradas</font></p>
+    <canvas id="coronas" width="500" height="250" style="border:1px solid black; background:lightyellow;">
+      Tu navegador no soporta el elemento canvas.
+    </canvas>
+
+    <script>
+      const canvasCoronas = document.getElementById("coronas");
+      const ctxCoronas = canvasCoronas.getContext("2d");
+
+      function dibujarCorona(x, y) {
+        ctxCoronas.fillStyle = "gold";
+        ctxCoronas.beginPath();
+        ctxCoronas.moveTo(x, y);
+        ctxCoronas.lineTo(x + 20, y - 30);
+        ctxCoronas.lineTo(x + 40, y);
+        ctxCoronas.lineTo(x + 60, y - 30);
+        ctxCoronas.lineTo(x + 80, y);
+        ctxCoronas.lineTo(x, y);
+        ctxCoronas.fill();
+        ctxCoronas.fillRect(x, y, 80, 10); // base de la corona
+      }
+
+      canvasCoronas.addEventListener("click", function(e) {
+        const rect = canvasCoronas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        dibujarCorona(x, y);
+      });
+    </script>
+
+
+    <h2><font color="darkred">Tabla de canciones</font></h2>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Número</th>
+        <th>Canción</th>
+        <th>Duración</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Fearless</td>
+        <td>4:01</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Fifteen</td>
+        <td>4:54</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Love Story</td>
+        <td>3:55</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>You Belong With Me</td>
+        <td>3:51</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>White Horse</td>
+        <td>3:54</td>
+      </tr>
+    </table>
+
+    <h2><font color="darkred">Listas variadas</font></h2>
+    <h3>Lista ordenada de premios</h3>
+    <ol>
+      <li>Grammy al Álbum del Año (2010)</li>
+      <li>Mejor Álbum Country</li>
+      <li>Billboard Top 200 #1</li>
+    </ol>
+
+    <h3>Lista no ordenada de temas del álbum</h3>
+    <ul>
+      <li>Amor juvenil</li>
+      <li>Valentía</li>
+      <li>Esperanza</li>
+      <li>Romanticismo</li>
+    </ul>
+
+    <h3>Lista de definición</h3>
+    <dl>
+      <dt><dfn>Fearless</dfn></dt>
+      <dd>Ser valiente ante el amor y la vida, sin miedo a sentir.</dd>
+    </dl>
+
+    <h2><font color="darkred">Formulario interactivo</font></h2>
+    <form>
+      <fieldset>
+        <legend>Tu experiencia con Fearless</legend>
+
+        <label for="nombre">Tu nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="favorita">Canción favorita:</label><br>
+        <select id="favorita" name="favorita">
+          <optgroup label="Éxitos principales">
+            <option value="love">Love Story</option>
+            <option value="belong">You Belong With Me</option>
+            <option value="fifteen">Fifteen</option>
+          </optgroup>
+          <optgroup label="Otras joyas">
+            <option value="whitehorse">White Horse</option>
+            <option value="fearless">Fearless</option>
+          </optgroup>
+        </select><br><br>
+
+        <label for="fecha">Fecha en que lo escuchaste por primera vez:</label><br>
+        <input type="date" id="fecha" name="fecha"><br><br>
+
+        <label for="color">Color que te recuerda al álbum:</label><br>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="archivo">Sube tu imagen favorita:</label><br>
+        <input type="file" id="archivo" name="archivo"><br><br>
+
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="40"></textarea><br><br>
+
+    
+      </fieldset>
+    </form>
+
+    <h2><font color="darkred">Enlaces útiles</font></h2>
+    <p>
+      <a href="https://www.taylorswift.com" target="_blank">Sitio oficial de Taylor Swift</a><br><br>
+      <a href="https://www.youtube.com/@TaylorSwift" target="_blank">Canal oficial de YouTube</a><br><br>
+      <a href="https://x.com/tsbzkdl" target="_blank">Twitter</a><br><br>
+      <a href="https://www.github.com/landyltfgtft" target="_blank">GitHub</a><br><br>
+      
+    </p>
+
+    <h2><font color="darkred">Opciones extra</font></h2>
+    <p><kbd>Ctrl + L</kbd> para abrir el enlace de Love Story.</p>
+    <p><samp>Error 2008: nostalgia detectada</samp></p>
+    <p>Variable <var>x</var> = año de lanzamiento.</p>
+    <p><cite>Love Story</cite> — canción que definió una generación.</p>
+    <p><q>“Baby, just say yes.”</q></p>
+  </main>
+
+  <footer>
+    <p><font color="gray">© 2026 Zoe - Proyecto HTML</font></p>
+  </footer>
+</body>
+</html>

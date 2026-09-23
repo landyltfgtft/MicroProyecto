@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reputation - Taylor Swift</title>
+</head>
+<body bgcolor="silver">
+  <header>
+    <h1><font color="black">Reputation (2017)</font></h1>
+    <a href="index.html">Volver al inicio</a>
+    <p><font color="darkred">
+      El sexto álbum de estudio de Taylor Swift, donde muestra una nueva faceta más audaz y poderosa.
+    </font></p>
+  </header>
+
+  <main>
+    <h2><font color="darkred">Portada del álbum</font></h2>
+    <img src="img/rep.jpg" alt="Portada del álbum Reputation" width="300">
+
+    <h2><font color="darkred">Historia</font></h2>
+    <p>
+      <font color="darkgreen">
+      *Reputation* fue lanzado el 10 de noviembre de 2017.  
+      Taylor exploró temas de fama, amor y redención, con un sonido más electrónico y oscuro.  
+      El álbum incluye éxitos como <i>Look What You Made Me Do</i> y <i>Delicate</i>.
+      </font>
+    </p>
+
+    <h2><font color="darkred">Mini‑juego con Canvas</font></h2>
+    <p>Haz clic en el lienzo para cambiar el color del círculo 🎯</p>
+    <canvas id="juego" width="400" height="300" style="border:1px solid black;"></canvas>
+
+    <script>
+      const canvas = document.getElementById("juego");
+      const ctx = canvas.getContext("2d");
+      let color = "black";
+
+      function dibujar() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(200, 150, 50, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+
+      dibujar();
+
+      canvas.addEventListener("click", () => {
+        const colores = ["black", "red", "purple", "gold", "gray"];
+        color = colores[Math.floor(Math.random() * colores.length)];
+        dibujar();
+      });
+    </script>
+
+    <h2><font color="darkred">Listas distintas</font></h2>
+    <h3>Lista ordenada de canciones</h3>
+    <ol>
+      <li>...Ready For It?</li>
+      <li>End Game</li>
+      <li>I Did Something Bad</li>
+      <li>Delicate</li>
+      <li>Look What You Made Me Do</li>
+    </ol>
+
+        <h2><font color="darkred">Premios y reconocimientos</font></h2>
+    <p><font color="darkblue">
+      El álbum <b>Reputation</b> fue un éxito mundial, debutando en el número 1 del Billboard 200.  
+      Ganó múltiples premios, incluyendo el <i>American Music Award</i> a Álbum Favorito Pop/Rock.  
+      Además, su gira fue una de las más taquilleras de la historia.
+    </font></p>
+
+    <h2><font color="darkred">Curiosidades</font></h2>
+    <ul>
+      <li><font color="darkgreen">Fue el primer álbum de Taylor en usar una estética más oscura y misteriosa.</font></li>
+      <li><font color="darkgreen">La canción “Delicate” se convirtió en un himno de vulnerabilidad y confianza.</font></li>
+      <li><font color="darkgreen">El tour de Reputation recaudó más de 300 millones de dólares.</font></li>
+      <li><font color="darkgreen">La portada muestra a Taylor con tipografía inspirada en periódicos.</font></li>
+    </ul>
+
+    <h2><font color="darkred">Tabla de impacto</font></h2>
+    <table border="1" cellpadding="5">
+      <tr bgcolor="lightgray">
+        <th>Año</th>
+        <th>Evento</th>
+        <th>Impacto</th>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td>Lanzamiento del álbum</td>
+        <td>Debut #1 en Billboard</td>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>Reputation Stadium Tour</td>
+        <td>Más de 2 millones de asistentes</td>
+      </tr>
+      <tr>
+        <td>2019</td>
+        <td>Premios AMA</td>
+        <td>Álbum Favorito Pop/Rock</td>
+      </tr>
+    </table>
+
+    <h2><font color="darkred">Juego extra en Canvas</font></h2>
+    <p><font color="darkblue">Haz clic para crear corazones ❤️ en el lienzo</font></p>
+    <canvas id="corazones" width="400" height="200" style="border:1px solid black; background:pink;">
+      Tu navegador no soporta el elemento canvas.
+    </canvas>
+
+    <script>
+      const canvas2 = document.getElementById("corazones");
+      const ctx2 = canvas2.getContext("2d");
+
+      function dibujarCorazon(x, y) {
+        ctx2.fillStyle = "red";
+        ctx2.beginPath();
+        ctx2.moveTo(x, y);
+        ctx2.bezierCurveTo(x - 10, y - 10, x - 25, y + 10, x, y + 25);
+        ctx2.bezierCurveTo(x + 25, y + 10, x + 10, y - 10, x, y);
+        ctx2.fill();
+      }
+
+      canvas2.addEventListener("click", function(e) {
+        const rect = canvas2.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        dibujarCorazon(x, y);
+      });
+    </script>
+
+
+    <h3>Lista no ordenada de temas del álbum</h3>
+    <ul>
+      <li>Fama</li>
+      <li>Amor</li>
+      <li>Redención</li>
+      <li>Confianza</li>
+    </ul>
+
+    <h3>Lista de definición</h3>
+    <dl>
+      <dt><dfn>Reputation</dfn></dt>
+      <dd>La reputación que se construye y se destruye en la era digital.</dd>
+    </dl>
+
+    <h2><font color="darkred">Importante</font></h2>
+    <p><kbd>Ctrl + R</kbd> para reiniciar el juego.</p
+    <p><cite>Look What You Made Me Do</cite> — canción icónica del álbum.</p>
+    <p><q>“Mi reputación nunca ha sido peor, así que... tú debes gustarme por mí.”</q></p>
+
+    <h2><font color="darkred">Formulario rápido</font></h2>
+    <form>
+      <label for="colorfav">Color favorito del álbum:</label><br>
+      <input type="color" id="colorfav" name="colorfav"><br><br>
+
+      <label for="fecha">Fecha en que lo escuchaste:</label><br>
+      <input type="date" id="fecha" name="fecha"><br><br>
+
+      <label for="archivo">Sube tu imagen favorita:</label><br>
+      <input type="file" id="archivo" name="archivo"><br><br>
+
+    
+    </form>
+
+    <h2><font color="darkred">Enlaces</font></h2>
+    <p>
+      <a href="https://x.com/tsbzkdl">Twitter</a><br><br>
+      <a href="https://www.github.com/landyltfgtft">GitHub</a><br><br>
+      
+    </p>
+  </main>
+
+  <footer>
+    <p><font color="gray">© 2026 Zoe - Proyecto HTML</font></p>
+  </footer>
+</body>
+</html>

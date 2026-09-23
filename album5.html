@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>1989 - Taylor Swift</title>
+</head>
+<body bgcolor="lightpink">
+  <header>
+    <h1><font color="darkblue">1989 (2014)</font></h1>
+    <a href="index.html">Volver al inicio</a>
+    <p><font color="purple">
+      El quinto álbum de estudio de Taylor Swift marcó su transición definitiva al pop.  
+      Con sonidos ochenteros y letras sobre libertad, amor y reinvención, *1989* redefinió su carrera.
+    </font></p>
+  </header>
+
+  <main>
+    <h2><font color="darkred">Portada del álbum</font></h2>
+    <img src="img/1989.jpg" alt="Portada del álbum 1989" width="300">
+
+    <h2><font color="darkred">Historia</font></h2>
+    <p>
+      <font color="darkgreen">
+      *1989* fue lanzado el 27 de octubre de 2014.  
+      Inspirado en la música pop de los años 80, Taylor decidió dejar atrás el country y crear un sonido más moderno.  
+      El álbum ganó el Grammy a “Álbum del Año” y vendió millones de copias en todo el mundo.  
+      Canciones como <i>Blank Space</i>, <i>Style</i> y <i>Shake It Off</i> se convirtieron en himnos globales.
+      </font>
+    </p>
+
+    <h2><font color="darkred">Video destacado</font></h2>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/e-ORhEE9VVg"
+      title="Taylor Swift - Blank Space (Official Video)" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+        <h2><font color="darkred">Curiosidades</font></h2>
+    <ul>
+      <li><font color="darkgreen">Fue el primer álbum completamente pop de Taylor.</font></li>
+      <li><font color="darkgreen">“Shake It Off” se convirtió en un himno global de confianza.</font></li>
+      <li><font color="darkgreen">La gira de 1989 recaudó más de 250 millones de dólares.</font></li>
+      <li><font color="darkgreen">El título hace referencia al año de nacimiento de Taylor.</font></li>
+    </ul>
+
+    <h2><font color="darkred">Tabla de impacto</font></h2>
+    <table border="1" cellpadding="5">
+      <tr bgcolor="lightyellow">
+        <th>Año</th>
+        <th>Evento</th>
+        <th>Impacto</th>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td>Lanzamiento del álbum</td>
+        <td>Debut #1 en Billboard</td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td>Grammy a Álbum del Año</td>
+        <td>Reconocimiento mundial</td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>1989 World Tour</td>
+        <td>Más de 2 millones de asistentes</td>
+      </tr>
+    </table>
+
+    <h2><font color="darkred">Juego en Canvas: Notas musicales 🎵</font></h2>
+    <p><font color="darkblue">Haz clic en el lienzo para crear notas musicales</font></p>
+    <canvas id="notas" width="500" height="250" style="border:1px solid black; background:lightpink;">
+      Tu navegador no soporta el elemento canvas.
+    </canvas>
+
+    <script>
+      const canvasNotas = document.getElementById("notas");
+      const ctxNotas = canvasNotas.getContext("2d");
+
+      function dibujarNota(x, y) {
+        ctxNotas.fillStyle = "purple";
+        ctxNotas.beginPath();
+        ctxNotas.arc(x, y, 10, 0, 2 * Math.PI); // círculo de la nota
+        ctxNotas.fill();
+        ctxNotas.beginPath();
+        ctxNotas.moveTo(x + 10, y);
+        ctxNotas.lineTo(x + 10, y - 30); // línea de la nota
+        ctxNotas.strokeStyle = "purple";
+        ctxNotas.stroke();
+      }
+
+      canvasNotas.addEventListener("click", function(e) {
+        const rect = canvasNotas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        dibujarNota(x, y);
+      });
+    </script>
+
+
+    <h2><font color="darkred">Tabla de canciones</font></h2>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Número</th>
+        <th>Canción</th>
+        <th>Duración</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Welcome to New York</td>
+        <td>3:32</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Blank Space</td>
+        <td>3:51</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Style</td>
+        <td>3:51</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Shake It Off</td>
+        <td>3:39</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Wildest Dreams</td>
+        <td>3:40</td>
+      </tr>
+    </table>
+
+    <h2><font color="darkred">Listas variadas</font></h2>
+    <h3>Lista ordenada de premios</h3>
+    <ol>
+      <li>Grammy al Álbum del Año</li>
+      <li>Billboard Top 200 #1</li>
+      <li>MTV Video Music Award por “Blank Space”</li>
+    </ol>
+
+    <h3>Lista no ordenada de temas del álbum</h3>
+    <ul>
+      <li>Reinvención</li>
+      <li>Pop moderno</li>
+      <li>Autoconfianza</li>
+      <li>Estilo visual</li>
+    </ul>
+
+    <h3>Lista de definición</h3>
+    <dl>
+      <dt><dfn>1989</dfn></dt>
+      <dd>El año de nacimiento de Taylor y el título del álbum que simboliza su nueva era.</dd>
+    </dl>
+
+    <h2><font color="darkred">Formulario interactivo</font></h2>
+    <form>
+      <fieldset>
+        <legend>Tu experiencia con 1989</legend>
+
+        <label for="nombre">Tu nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="favorita">Canción favorita:</label><br>
+        <select id="favorita" name="favorita">
+          <optgroup label="Éxitos principales">
+            <option value="blank">Blank Space</option>
+            <option value="style">Style</option>
+            <option value="shake">Shake It Off</option>
+          </optgroup>
+          <optgroup label="Otras joyas">
+            <option value="wildest">Wildest Dreams</option>
+            <option value="newyork">Welcome to New York</option>
+          </optgroup>
+        </select><br><br>
+
+        <label for="fecha">Fecha en que lo escuchaste por primera vez:</label><br>
+        <input type="date" id="fecha" name="fecha"><br><br>
+
+        <label for="color">Color que te recuerda al álbum:</label><br>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="archivo">Sube tu imagen favorita:</label><br>
+        <input type="file" id="archivo" name="archivo"><br><br>
+
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="40"></textarea><br><br>
+
+      </fieldset>
+    </form>
+
+    <h2><font color="darkred">Enlaces útiles</font></h2>
+    <p>
+      <a href="https://www.taylorswift.com" target="_blank">Sitio oficial de Taylor Swift</a><br><br>
+      <a href="https://www.youtube.com/@TaylorSwift" target="_blank">Canal oficial de YouTube</a><br><br>
+      <a href="https://x.com/tsbzkdl" target="_blank">Twitter</a><br><br>
+      <a href="https://www.github.com/landyltfgtft" target="_blank">GitHub</a><br><br>
+      <a href="archivos/1989.pdf" target="_blank">Descargar PDF informativo</a><br><br>
+    </p>
+
+    <h2><font color="darkred">Opciones extra</font></h2>
+    <p><kbd>Ctrl + S</kbd> para guardar tu opinión.</p>
+    <p><samp>Error 1989: nostalgia detectada</samp></p>
+    <p>Variable <var>x</var> = año de lanzamiento.</p>
+    <p><cite>Shake It Off</cite> — canción que marcó el cambio de estilo.</p>
+    <p><q>“Cause darling I'm a nightmare dressed like a daydream.”</q></p>
+  </main>
+
+  <footer>
+    <p><font color="gray">© 2026 Zoe - Proyecto HTML</font></p>
+  </footer>
+</body>
+</html>
